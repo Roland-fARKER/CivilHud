@@ -1,0 +1,298 @@
+/* Nav */
+.navbar {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px var(--primary-color);
+  padding: 1rem;
+  justify-content: space-around;
+  font-family: var(--primary-font);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--bg-color);
+  position: sticky;
+}
+
+.logo-container img {
+  width: 5rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+  transition: ease-in 0.2s;
+}
+
+/* Estilos móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--bg-color);
+    padding-top: 5rem;
+    transform: translateX(100%);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  /* Mostrar cuando esté abierto */
+  .navigation.open {
+    transform: translateX(0);
+  }
+
+  .navigation li {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+/*hero*/
+
+.hero-section {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.ctas-container h1 {
+  font-family: var(--primary-font);
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+}
+
+.ctas-container h3 {
+  font-family: var(--primary-font);
+  color: var(--gray-400);
+  max-width: 50rem;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.btn-secondary {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 3px solid var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shape-1 {
+  border-radius: 77% 23% 71% 29% / 45% 30% 70% 55%;
+  width: 30rem;
+  height: 30rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shape-2 {
+  border-radius: 15% 85% 25% 75% / 45% 72% 28% 55%;
+  height: 30rem;
+  width: 30rem;
+  border: 5px solid var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shape-3 {
+  height: 22rem;
+  border-radius: 65% 35% 84% 16% / 47% 43% 57% 53%;
+  position: absolute;
+  top: -2;
+  left: 0;
+}
+
+.shape-container {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 568px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/*header setion 2*/
+
+.header {
+  position: relative;
+  font-family: var(--primary-font);
+  width: 100%;
+  height: 200px; /* o lo que necesites */
+  background-image: url('https://blogs.ucontinental.edu.pe/wp-content/uploads/2022/05/te-gusta-la-construccion-seis-razones-para-estudiar-ingenieria-civil-universidad-continental-3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* ← Ajusta la opacidad aquí */
+  z-index: 1;
+}
+
+.header h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: var(--primary-font);
+  position: relative;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-icon {
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  color: var(--bg-color);
+}
+
+/* Responsive para pantallas menores a 768px */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+  }
+}
+
+/* Aún más pequeño (opcional) */
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* 1 columna si es muy pequeño */
+  }
+}
+
+/*users section*/
+.section-user {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.section-user h2 {
+    font-family: var(--primary-font);
+    padding: 2rem;
+    text-align: center;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas en desktop */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.user-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--primary-font);
+  cursor: pointer;
+}
+
+.user-card:hover{
+    transform: scale(1.1);
+}
+
+.user-card  lucide-angular{
+    color: var(--secondary-color);
+}
+
+
+/*footer*/

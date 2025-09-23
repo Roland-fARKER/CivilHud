@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "mobile": "ng serve --host=0.0.0.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -28,6 +29,8 @@
     "@angular/forms": "^20.2.0",
     "@angular/platform-browser": "^20.2.0",
     "@angular/router": "^20.2.0",
+    "@supabase/supabase-js": "^2.57.4",
+    "lucide-angular": "^0.544.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

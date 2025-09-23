@@ -1,59 +1,116 @@
-# CivilHud
+# CivilHud 🏗️
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+<p align="center">
+  <img src="./src/assets/logo-1.png" alt="CivilHud Logo" width="200"/>
+</p>
 
-## Development server
+**CivilHud** es una plataforma web innovadora que transforma la forma en que se calculan y adquieren materiales de construcción en Nicaragua.
 
-To start a local development server, run:
+> 📊 Desde el cálculo exacto de materiales hasta la comparación de precios entre ferreterías, CivilHud busca reducir desperdicios, ahorrar costos y digitalizar la experiencia de compra en el sector construcción.
+
+---
+
+## ✨ Características principales
+
+- 📐 **Cálculo de materiales** según necesidades específicas de construcción.
+- 💰 **Ahorro del 15-30%** gracias a estimaciones optimizadas.
+- 📄 **Reportes detallados y descargables**.
+- 🏪 **Comparación transparente de precios** entre ferreterías.
+- 🤝 **Ferreterías con acceso a nuevos clientes** y licitaciones digitales justas.
+- 🌐 **Integración única** de cálculos técnicos + subasta digital en una sola plataforma.
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
+- [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
+- [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+---
+
+## ⚙️ Configuración de Entornos
+
+Este proyecto utiliza **variables de entorno** para configurar servicios externos como Supabase.  
+Debes asegurarte de configurar correctamente los archivos en `src/environments/`:
+
+- `environment.ts` → Configuración para desarrollo.
+- `environment.prod.ts` → Configuración para producción.
+- `environment.example.ts` → Ejemplo incluido en el repositorio (usa este archivo como plantilla).
+
+Ejemplo:
+
+```ts
+// src/environments/environment.ts
+export const environment = {
+  production: false,
+  supabaseUrl: 'https://your-project.supabase.co',
+  supabaseKey: 'public-anon-key',
+};
+```
+
+## 🛠️ Desarrollo
+
+### Servidor de desarrollo
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navega a http://localhost:4200/ 🚀. La aplicación se recargará automáticamente al hacer cambios en los archivos fuente.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Generar componentes con el CLI de Angular
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+También puedes generar directivas, pipes, servicios y más:
 
 ```bash
 ng generate --help
 ```
 
-## Building
-
-To build the project run:
+## 🛠️ Contruccion del proyecto
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Esto compilará el proyecto y almacenará los artefactos en la carpeta dist/.
+El build de producción incluye optimizaciones para rendimiento y velocidad.
 
-## Running unit tests
+## 🧪 Testing
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+**Unit Tests**
+
+Ejecuta los tests unitarios con Karma:
 
 ```bash
 ng test
 ```
+**End-to-End Tests**
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Ejecuta pruebas end-to-end (E2E):
 
 ```bash
 ng e2e
 ```
+⚠️ Angular CLI no incluye por defecto un framework E2E. Debes elegir uno (por ejemplo Cypresso Playwright).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📊 Modelo de Negocio (Canvas)
 
-## Additional Resources
+**Propuesta de valor**
+CivilHud es la integración única de cálculos técnicos y subasta digital en una sola web.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✅ Ahorro económico y reducción de desperdicios para usuarios.
+
+✅ Transparencia y acceso a nuevos clientes para ferreterías.
+
+✅ Inclusión digital de usuarios con y sin conocimientos técnicos.
+
+✅ Reducción de la economía informal en el sector construcción.
+
+<p align="center">
+    <h1>💡 Construyendo el futuro de la construcción digital en Nicaragua.</h1>
+</p>
