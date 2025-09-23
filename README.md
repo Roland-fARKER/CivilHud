@@ -112,5 +112,5 @@ CivilHud es la integración única de cálculos técnicos y subasta digital en u
 ✅ Reducción de la economía informal en el sector construcción.
 
 <p align="center">
-    <h1>💡 Construyendo el futuro de la construcción digital en Nicaragua.</h1>
+    <h1 align="center">💡 Construyendo el futuro de la construcción digital en Nicaragua.</h1>
 </p>
