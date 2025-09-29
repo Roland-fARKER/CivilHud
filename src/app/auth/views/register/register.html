@@ -1,0 +1,146 @@
+<div class="register-ccontainer">
+  <div class="main-container">
+
+    <p-card class="register-card">
+      <h3>Crea una Cuenta</h3>
+
+      <p-stepper [value]="1" class="basis-[50rem]">
+        <p-step-item [value]="1">
+          <p-step>Personal</p-step>
+          <p-step-panel>
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="section-stepper">
+                <p-inputgroup>
+                  <p-inputgroup-addon>
+                    <lucide-angular name="User"></lucide-angular>
+                  </p-inputgroup-addon>
+                  <input pInputText name="nombre" placeholder="Nombre completo" required />
+                </p-inputgroup>
+
+                <p-inputgroup>
+                  <p-inputgroup-addon>
+                    <lucide-angular name="Mail"></lucide-angular>
+                  </p-inputgroup-addon>
+                  <input pInputText name="correo" placeholder="Correo electrónico" required />
+                </p-inputgroup>
+              </div>
+              <div class="py-6">
+                <p-button label="Siguiente" (onClick)="activateCallback(2)" />
+              </div>
+            </ng-template>
+          </p-step-panel>
+        </p-step-item>
+
+        <p-step-item [value]="2">
+          <p-step>Profesional</p-step>
+          <p-step-panel>
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="section-stepper">
+                <label for="profesion" class="mb-2">Profesión</label>
+                <p-select
+                  [options]="profesiones"
+                  [(ngModel)]="profesionSeleccionada"
+                  optionLabel="label"
+                  optionValue="value"
+                  placeholder="Seleccione una Profesión"
+                />
+
+                <label for="profesion" class="mb-2"
+                  >¿Nos cuentas para qué te gustaría usar CivilHud? Así podremos adaptar la
+                  experiencia a tus necesidades.</label
+                >
+                <p-select
+                  [options]="usagePurposes"
+                  [(ngModel)]="selectedPurpose"
+                  optionLabel="label"
+                  optionValue="value"
+                  placeholder="Seleccione un proposito de uso"
+                />
+              </div>
+              <div class="btn-container">
+                <button
+                  pButton
+                  class="w-full"
+                  label="Regresar"
+                  severity="secondary"
+                  (click)="activateCallback(1)"
+                ></button>
+                <button
+                  pButton
+                  class="w-full"
+                  label="Siguiente"
+                  (click)="activateCallback(3)"
+                ></button>
+              </div>
+            </ng-template>
+          </p-step-panel>
+        </p-step-item>
+
+        <p-step-item [value]="3">
+          <p-step>Seguridad</p-step>
+          <p-step-panel>
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="section-stepper">
+                <p-inputgroup>
+                  <p-inputgroup-addon>
+                    <lucide-angular name="Lock"></lucide-angular>
+                  </p-inputgroup-addon>
+                  <p-password
+                    name="contrasena"
+                    placeholder="Contraseña"
+                    [feedback]="false"
+                    toggleMask="true"
+                    required
+                  ></p-password>
+                </p-inputgroup>
+                <p-inputgroup>
+                  <p-inputgroup-addon>
+                    <lucide-angular name="Lock"></lucide-angular>
+                  </p-inputgroup-addon>
+                  <p-password
+                    name="contrasena"
+                    placeholder="Confirmar contraseña"
+                    [feedback]="false"
+                    toggleMask="true"
+                    required
+                  ></p-password>
+                </p-inputgroup>
+              </div>
+              <p class="terms-conditions">
+                <p-checkbox
+                  name="rememberMe"
+                  binary="true"
+                  inputId="rememberMe"
+                  size="small"
+                ></p-checkbox>
+                <label for="rememberMe"
+                  >He leído y acepto los <strong>términos y condiciones</strong></label
+                >
+              </p>
+              <div class="btn-container">
+                <button
+                  pButton
+                  class="w-full"
+                  label="Regresar"
+                  severity="secondary"
+                  (click)="activateCallback(2)"
+                ></button>
+                <button pButton class="w-full" label="Registrarme"></button>
+              </div>
+            </ng-template>
+          </p-step-panel>
+        </p-step-item>
+      </p-stepper>
+      <div class="btn-container">
+        <button pButton text="true" label="ya estoy registrado? inicia sesión" class="w-full"></button>
+      </div>
+      <div class="btn-container">
+        <button pButton severity="secondary" label="Registrar Ferreteria" class="w-full"></button>
+      </div>
+    </p-card>
+  </div>
+  <div class="pic-container">
+    <h1>Únase a Nosotros</h1>
+    <img src="assets/svg/building-2.svg" />
+  </div>
+</div>

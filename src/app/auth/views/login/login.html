@@ -1,0 +1,53 @@
+<div class="login-container">
+  <div class="pic-container">
+    <img src="assets/svg/Building.svg" />
+  </div>
+  <div class="main-container">
+    <h1>Bienvenido de Nuevo</h1>
+    <p-card class="login-card">
+      <ng-template #header>
+        <h3>Iniciar Sesión</h3>
+      </ng-template>
+
+      <div>
+        <form #form="ngForm" class="login-form">
+          <p-inputgroup>
+            <p-inputgroup-addon>
+              <lucide-angular name="User"></lucide-angular>
+            </p-inputgroup-addon>
+            <input pInputText name="correo" placeholder="Correo electrónico" required />
+          </p-inputgroup>
+
+          <p-inputgroup>
+            <p-inputgroup-addon>
+              <lucide-angular name="Lock"></lucide-angular>
+            </p-inputgroup-addon>
+            <p-password
+              name="contrasena"
+              placeholder="Contraseña"
+              [feedback]="false"
+              toggleMask="true"
+              required
+            ></p-password>
+          </p-inputgroup>
+
+          <p class="remember-me">
+            <p-checkbox
+              name="rememberMe"
+              binary="true"
+              inputId="rememberMe"
+              size="small"
+            ></p-checkbox>
+            <label for="rememberMe">Recuérdame</label>
+          </p>
+
+          <button pButton type="submit" label="Iniciar Sesión" class="w-full"></button>
+
+          <small>
+            <a routerLink="/auth/forgot-password"> ¿Ha olvidado su contraseña? </a>
+          </small>
+        </form>
+      </div>
+    </p-card>
+  </div>
+</div>

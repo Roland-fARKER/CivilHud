@@ -1,4 +1,8 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import {
+  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA,
+  provideBrowserGlobalErrorListeners,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   LucideAngularModule,
@@ -19,6 +23,9 @@ import {
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './views/home/home';
+import customPreset from './utilities/custom-preset.primeng';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
 
 @NgModule({
   declarations: [App, Home],
@@ -37,10 +44,20 @@ import { Home } from './views/home/home';
       Menu,
       UserCheck,
       Pencil,
-      HardHat
+      HardHat,
     }),
   ],
-  providers: [provideBrowserGlobalErrorListeners()],
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: customPreset,
+        options: { darkModeSelector: false },
+      },
+    }),
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [App],
 })
 export class AppModule {}

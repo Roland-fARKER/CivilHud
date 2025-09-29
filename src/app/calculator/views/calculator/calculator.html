@@ -1,0 +1,60 @@
+
+
+<p-select [options]="tipos" [(ngModel)]="tipoSeleccionado" placeholder="Seleccione un tipo de cálculo"></p-select>
+
+<div *ngIf="tipoSeleccionado === 'mamposteria'" class="p-fluid">
+  <div class="p-field">
+    <label>Alto (m)</label>
+    <input pInputText type="number" [(ngModel)]="mamposteria.alto" />
+  </div>
+  <div class="p-field">
+    <label>Perímetro (m)</label>
+    <input pInputText type="number" [(ngModel)]="mamposteria.perimetro" />
+  </div>
+  <div class="p-field">
+    <label>Área de boquetes (m²)</label>
+    <input pInputText type="number" [(ngModel)]="mamposteria.areaBoquetes" />
+  </div>
+</div>
+
+<div *ngIf="tipoSeleccionado === 'columnas'" class="p-fluid">
+  <div class="p-field">
+    <label>Alto (m)</label>
+    <input pInputText type="number" [(ngModel)]="columnas.alto" />
+  </div>
+  <div class="p-field">
+    <label>Ancho (m)</label>
+    <input pInputText type="number" [(ngModel)]="columnas.ancho" />
+  </div>
+  <div class="p-field">
+    <label>Largo (m)</label>
+    <input pInputText type="number" [(ngModel)]="columnas.largo" />
+  </div>
+  <div class="p-field">
+    <label>Varillas</label>
+    <input pInputText type="number" [(ngModel)]="columnas.varillas" />
+  </div>
+  <div class="p-field">
+    <label>Diámetro</label>
+    <p-select [options]="['#2', '#3', '#4']" [(ngModel)]="columnas.diametro"></p-select>
+
+  </div>
+</div>
+
+<div *ngIf="tipoSeleccionado === 'piso'" class="p-fluid">
+  <div class="p-field">
+    <label>Área (m²)</label>
+    <input pInputText type="number" [(ngModel)]="piso.area" />
+  </div>
+  <div class="p-field">
+    <label>Espesor (m)</label>
+    <input pInputText type="number" [(ngModel)]="piso.espesor" />
+  </div>
+</div>
+
+<button pButton type="button" label="Calcular" (click)="calcular()"></button>
+
+<div *ngIf="resultado" class="p-mt-3">
+  <h4>Resultado</h4>
+  <pre>{{ resultado | json }}</pre>
+</div>

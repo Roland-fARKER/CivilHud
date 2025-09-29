@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Login } from './views/login/login';
-import { Register } from './views/register/register';
-import { AuthRoutingModule } from './auth.routing';
+import { Calculator } from './views/calculator/calculator';
+import { CalculatorRoutingModule } from './calculator.routing';
 import { SharedModule } from '../shared/shared-module';
 
 @NgModule({
   declarations: [
-    Login,
-    Register
+    Calculator
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    CalculatorRoutingModule,
     SharedModule
   ]
 })
-export class AuthModule { }
+export class CalculatorModule { }
